@@ -131,7 +131,7 @@ def Algoritmo_genetico(Nodos, Costos, Tam_poblacion, Generaciones, Prob_mutacion
 
 if __name__ == "__main__":
 
-    # grafo basado en tu CSV y tus rutas directas
+    # grafo basado en el CSV y las rutas directas
     Nodos = {
         "Casa": ["Autolavado", "Estetica", "Hospital", "Garaje", "Tacon", "Paintspray", "Ammu_Nation", "Concesionario", "Cine"],
         "Estetica": ["Garaje"],
@@ -145,7 +145,7 @@ if __name__ == "__main__":
         "Cine": []
     }
 
-    # costos de tus rutas
+    # costos de rutas
     Costos = {
         "Casa": {
             "Autolavado": 100,

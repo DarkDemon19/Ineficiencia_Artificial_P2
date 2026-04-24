@@ -43,7 +43,7 @@ def Haz_local(Inicio_lista, Vecinos, Valor, K, Iter_max):
 
 if __name__ == "__main__":
 
-    # grafo basado en tu CSV y tus rutas directas
+    # grafo basado en el CSV y las rutas directas
     Vecinos = {
         "Casa": ["Autolavado", "Estetica", "Hospital", "Garaje", "Tacon", "Paintspray", "Ammu_Nation", "Concesionario", "Cine"],
         "Estetica": ["Garaje"],
@@ -57,7 +57,7 @@ if __name__ == "__main__":
         "Cine": []
     }
 
-    # valores basados en tus costos
+    # valores basados en los costos
     # menor costo = mejor estado, por eso se usa valor negativo
     Valores = {
         "Casa": 0,

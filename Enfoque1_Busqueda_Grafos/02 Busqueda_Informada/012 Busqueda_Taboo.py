@@ -1,4 +1,4 @@
-# Busqueda taboo
+# Busqueda tabu
 
 def Mejor_vecino_no_tabu(Actual, Vecinos, Valor, Tabu):
     # buscar mejor vecino que no este en tabu
@@ -58,9 +58,9 @@ def Busqueda_tabu(Inicio, Vecinos, Valor, Tam_tabu, Max_iter):
 
 if __name__ == "__main__":
 
-    # grafo basado en tu CSV
+    # grafo basado en el CSV y las rutas directas
     Vecinos = {
-        "Casa": ["Autolavado", "Estetica"],
+        "Casa": ["Autolavado", "Estetica", "Hospital", "Garaje", "Tacon", "Paintspray", "Ammu_Nation", "Concesionario", "Cine"],
         "Estetica": ["Garaje"],
         "Autolavado": ["Tacon"],
         "Tacon": ["Ammu_Nation", "Paintspray", "Hospital"],
@@ -72,24 +72,24 @@ if __name__ == "__main__":
         "Cine": []
     }
 
-    # valor de cada lugar
-    # mayor numero significa mejor estado
+    # valores basados en los costos
+    # menor costo = mejor estado, por eso se usa valor negativo
     Valores = {
-        "Casa": 1,
-        "Autolavado": 4,
-        "Estetica": 2,
-        "Garaje": 3,
-        "Tacon": 6,
-        "Ammu_Nation": 8,
-        "Paintspray": 5,
-        "Hospital": 7,
-        "Concesionario": 9,
-        "Cine": 10
+        "Casa": 0,
+        "Autolavado": -100,
+        "Estetica": -550,
+        "Garaje": -650,
+        "Tacon": -450,
+        "Paintspray": -1650,
+        "Ammu_Nation": -700,
+        "Hospital": -450,
+        "Concesionario": -750,
+        "Cine": -1600
     }
 
     def Valor(Nodo):
         # regresar valor del nodo
-        return Valores.get(Nodo, 0)
+        return Valores.get(Nodo, -9999)
 
     # pruebas
     Mejor1, Pasos1 = Busqueda_tabu(

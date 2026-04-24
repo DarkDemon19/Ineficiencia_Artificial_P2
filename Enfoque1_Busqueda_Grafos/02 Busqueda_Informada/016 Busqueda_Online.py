@@ -59,7 +59,7 @@ def Busqueda_online(Inicio, Objetivo, Mundo_real, Max_pasos):
 
 if __name__ == "__main__":
 
-    # mundo real basado en tu CSV y tus rutas directas
+    # mundo real basado en el CSV y las rutas directas
     Mundo_real = {
         "Casa": ["Autolavado", "Estetica", "Hospital", "Garaje", "Tacon", "Paintspray", "Ammu_Nation", "Concesionario", "Cine"],
         "Estetica": ["Garaje"],
@@ -73,7 +73,7 @@ if __name__ == "__main__":
         "Cine": []
     }
 
-    # costos de tus rutas
+    # costos de rutas
     Costos = {
         "Casa": {
             "Autolavado": 100,

@@ -41,7 +41,7 @@ def Busqueda_voraz(Grafo, Heuristica, Inicio, Objetivo):
 
 if __name__ == "__main__":
 
-    # grafo basado en tu CSV
+    # grafo basado en CSV
     Grafo = {
         "Casa": ["Autolavado", "Estetica"],
         "Estetica": ["Garaje"],
@@ -55,17 +55,18 @@ if __name__ == "__main__":
         "Cine": []
     }
 
-    # heuristica hacia Cine
+    # heuristica 
+    # menor numero significa que se ve mas cercano
     Heuristica = {
-        "Casa": 5,
-        "Autolavado": 3,
-        "Estetica": 4,
-        "Garaje": 5,
-        "Tacon": 2,
-        "Ammu_Nation": 1,
-        "Paintspray": 3,
-        "Hospital": 3,
-        "Concesionario": 1,
+        "Casa": 1000,
+        "Autolavado": 550,
+        "Estetica": 550,
+        "Garaje": 650,
+        "Tacon": 450,
+        "Ammu_Nation": 250,
+        "Paintspray": 950,
+        "Hospital": 450,
+        "Concesionario": 100,
         "Cine": 0
     }
 

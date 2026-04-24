@@ -55,7 +55,7 @@ def A_estrella(Grafo_costos, Heuristica, Inicio, Objetivo):
 
 if __name__ == "__main__":
 
-    # grafo con costos basado en tus recorridos
+    # grafo con costos basado en valores
     Grafo_costos = {
         "Casa": {
             "Autolavado": 100,
@@ -90,17 +90,17 @@ if __name__ == "__main__":
         "Cine": {}
     }
 
-    # heuristica hacia Cine
+    # heuristica basada en valores hacia Cine
     Heuristica = {
-        "Casa": 500,
-        "Autolavado": 400,
-        "Estetica": 700,
-        "Garaje": 900,
-        "Tacon": 300,
-        "Ammu_Nation": 100,
-        "Paintspray": 500,
-        "Hospital": 600,
-        "Concesionario": 200,
+        "Casa": 1000,
+        "Autolavado": 550,
+        "Estetica": 550,
+        "Garaje": 650,
+        "Tacon": 450,
+        "Ammu_Nation": 250,
+        "Paintspray": 950,
+        "Hospital": 450,
+        "Concesionario": 100,
         "Cine": 0
     }
 

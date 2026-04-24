@@ -20,11 +20,9 @@ def Camino_greedy(Grafo, Heuristica, Inicio, Objetivo):
     while Actual != Objetivo:
         Siguiente = Mejor_vecino_por_heuristica(Grafo, Heuristica, Actual)
 
-        # si no hay a donde ir
         if Siguiente is None:
             return Camino, False
 
-        # si se repite, se detiene
         if Siguiente in Visitados:
             return Camino, False
 
@@ -36,7 +34,7 @@ def Camino_greedy(Grafo, Heuristica, Inicio, Objetivo):
 
 if __name__ == "__main__":
 
-    # grafo basado en tu CSV
+    # grafo 
     Grafo = {
         "Casa": ["Autolavado", "Estetica"],
         "Estetica": ["Garaje"],
@@ -50,19 +48,18 @@ if __name__ == "__main__":
         "Cine": []
     }
 
-    # heuristica hacia Cine
-    # menor numero significa que esta mas cerca del objetivo
+    # heuristica basada en costos (invertida: menor costo = mejor)
     Heuristica = {
         "Cine": 0,
-        "Concesionario": 1,
-        "Ammu_Nation": 1,
-        "Hospital": 3,
-        "Paintspray": 3,
-        "Tacon": 2,
-        "Autolavado": 3,
-        "Garaje": 5,
-        "Estetica": 4,
-        "Casa": 5
+        "Concesionario": 100,
+        "Ammu_Nation": 250,
+        "Hospital": 450,
+        "Tacon": 450,
+        "Autolavado": 550,
+        "Estetica": 550,
+        "Garaje": 650,
+        "Paintspray": 950,
+        "Casa": 1000
     }
 
     # pruebas
